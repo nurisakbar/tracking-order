@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('province', [WilayahController::class,'province']);
 Route::get('city/{province_id}', [WilayahController::class,'city']);
+Route::post('cost', [WilayahController::class,'cost']);
