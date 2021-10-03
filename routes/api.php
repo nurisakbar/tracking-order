@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProvinceController;
+use App\Http\Controllers\WilayahController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,5 @@ use App\Http\Controllers\ProvinceController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('province', ProvinceController::class);
+Route::get('province', [WilayahController::class,'province']);
+Route::get('city/{province_id}', [WilayahController::class,'city']);
